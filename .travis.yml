@@ -4,9 +4,10 @@ language: ruby
 
 jobs:
   include:
-    - name: Linux Focal Ruby
+    - name: "Linux Focal Ruby"
       os: linux
       dist: focal
+      language: ruby
       addons:
         sbom:
           on:
@@ -16,8 +17,7 @@ jobs:
           mariadb: '10.0'
       script:
         - gem build ./ruby/hello_world.gemspec
-
-    - name: Linux Jammy Ruby
+    - name: "Linux Jammy Ruby"
       os: linux
       dist: jammy
       language: ruby
@@ -31,8 +31,7 @@ jobs:
           mariadb: '10.0'
       script:
         - gem build ./ruby/hello_world.gemspec
-
-    - name: Linux Xenial Ruby
+    - name: "Linux Xenial Ruby"
       os: linux
       dist: xenial
       language: ruby
@@ -46,8 +45,7 @@ jobs:
           mariadb: '10.0'
       script:
         - gem build ./ruby/hello_world.gemspec
-
-    - name: Linux Bionic Ruby
+    - name: "Linux Bionic Ruby"
       os: linux
       dist: bionic
       language: ruby
